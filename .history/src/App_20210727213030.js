@@ -15,9 +15,7 @@ function App() {
         <Route exact path="/starred">
           <Starred />
         </Route>
-        <Route>
-          <div>not found</div>
-        </Route>
+        <Route>this is not found 404.</Route>
       </Switch>
     </div>
   );
