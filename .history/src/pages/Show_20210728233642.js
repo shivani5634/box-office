@@ -12,10 +12,12 @@ const Show = () => {
     let isMounted = true;
     apiGet(`/shows/${id}?embed[]=seasons&embed[]=cast`)
       .then(results => {
-        if (isMounted) {
-          setShow(results);
-          setIsLoading(false);
-        }
+        setTimeout(() => {
+          if (isMounted) {
+            setShow(results);
+            setIsLoading(false);
+          }
+        }, 2000);
       })
       .catch(err => {
         if (isMounted) {
