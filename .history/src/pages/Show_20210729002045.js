@@ -23,10 +23,7 @@ const initialState = {
 const Show = () => {
   const { id } = useParams();
 
-  const [{ show, isLoading, error }, dispatch] = useReducer(
-    reducer,
-    initialState
-  );
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   //   const [show, setShow] = useState(null);
   //   const [isLoading, setIsLoading] = useState(true);
