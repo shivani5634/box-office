@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { SearchCard } from '../styled';
 import { StyledShowCard } from './ShowCard.styled';
 
 const ShowCard = ({ id, image, name, summary }) => {
@@ -18,7 +18,7 @@ const ShowCard = ({ id, image, name, summary }) => {
 
       <p>{summaryAsText}</p>
 
-      <div className="btns">
+      <div>
         <Link to={`/show/${id}`}>Read more</Link>
         <button type="button">Star me</button>
       </div>

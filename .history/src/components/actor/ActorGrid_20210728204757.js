@@ -18,7 +18,7 @@ const ActorGrid = ({ data }) => {
         />
       ))}
       ;
-    </FlexGrid>
+    </Fle>
   );
 };
 
