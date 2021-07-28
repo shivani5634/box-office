@@ -6,9 +6,9 @@ const Home = () => {
   const [input, setInput] = useState('');
   const [results, setResults] = useState(null);
   const [searchOption, setSearchOption] = useState('shows');
-  const isShowSearch = searchOption === 'shows';
+  const isShowSearch = searchOption === shows;
   const onSearch = () => {
-    apiGet(`/search/${searchOption}?q=${input}`).then(result => {
+    apiGet(`/search/shows?q=${input}`).then(result => {
       setResults(result);
     });
     // https://api.tvmaze.com/search/shows?q=girls
@@ -32,11 +32,13 @@ const Home = () => {
       return <div>No results</div>;
     }
     if (results && results.length > 0) {
-      return results[0].show
-        ? results.map(item => <div key={item.show.id}>{item.show.name}</div>)
-        : results.map(item => (
-            <div key={item.person.id}>{item.person.name}</div>
-          ));
+      return (
+        <div>
+          {results.map(item => (
+            <div key={item.show.id}>{item.show.name}</div>
+          ))}
+        </div>
+      );
     }
     return null;
   };
@@ -66,7 +68,6 @@ const Home = () => {
             id="search-actor"
             type="radio"
             value="people"
-            checked={!isShowSearch}
             onChange={onRadioChange}
           />
         </label>

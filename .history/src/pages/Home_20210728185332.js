@@ -37,46 +37,46 @@ const Home = () => {
         : results.map(item => (
             <div key={item.person.id}>{item.person.name}</div>
           ));
+      return null;
     }
-    return null;
+    return (
+      <MainPageLayout>
+        <input
+          type="text"
+          placeholder="search for something"
+          onChange={onInputChange}
+          onKeyDown={onKeyDown}
+          value={input}
+        />
+        <div>
+          <label htmlFor="search-shows">
+            Shows
+            <input
+              id="search-shows"
+              type="radio"
+              value="shows"
+              checked={isShowSearch}
+              onChange={onRadioChange}
+            />
+          </label>
+          <label htmlFor="search-actor">
+            Actor
+            <input
+              id="search-actor"
+              type="radio"
+              value="people"
+              checked={!isShowSearch}
+              onChange={onRadioChange}
+            />
+          </label>
+        </div>
+        <button type="button" onClick={onSearch}>
+          search
+        </button>
+        {renderResults()}
+      </MainPageLayout>
+    );
   };
-  return (
-    <MainPageLayout>
-      <input
-        type="text"
-        placeholder="search for something"
-        onChange={onInputChange}
-        onKeyDown={onKeyDown}
-        value={input}
-      />
-      <div>
-        <label htmlFor="search-shows">
-          Shows
-          <input
-            id="search-shows"
-            type="radio"
-            value="shows"
-            checked={isShowSearch}
-            onChange={onRadioChange}
-          />
-        </label>
-        <label htmlFor="search-actor">
-          Actor
-          <input
-            id="search-actor"
-            type="radio"
-            value="people"
-            checked={!isShowSearch}
-            onChange={onRadioChange}
-          />
-        </label>
-      </div>
-      <button type="button" onClick={onSearch}>
-        search
-      </button>
-      {renderResults()}
-    </MainPageLayout>
-  );
 };
 
 export default Home;
