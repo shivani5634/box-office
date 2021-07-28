@@ -1,7 +1,7 @@
 import React from 'react';
 import IMG_PLACEHOLDER from '../../images/not-found.png';
 import { Star } from '../styled';
-import { Headline, MainDataWrapper, TagList } from './ShowMainData.styled';
+import { Headline, MainDataWrapper } from './ShowMainData.styled';
 
 const ShowMainData = ({ name, rating, summary, tags, image }) => {
   return (
@@ -22,11 +22,11 @@ const ShowMainData = ({ name, rating, summary, tags, image }) => {
 
         <div>
           Tags:{' '}
-          <TagList>
+          <div>
             {tags.map((tag, i) => (
               <span key={i}>{tag}</span>
             ))}
-          </TagList>
+          </div>
         </div>
       </div>
     </MainDataWrapper>

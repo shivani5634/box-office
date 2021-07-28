@@ -1,5 +1,5 @@
 import React from 'react';
-import { SeasonList, SeasonsWrapper } from './Seasons.styled';
+import { SeasonsWrapper } from './Seasons.styled';
 
 const Seasons = ({ seasons }) => {
   return (
@@ -13,16 +13,16 @@ const Seasons = ({ seasons }) => {
           {seasons.reduce((acc, season) => acc + season.episodeOrder, 0)}
         </span>
       </p>
-      <SeasonList>
+      <div>
         {seasons.map(season => (
-          <div key={season.id} className="season-item">
-            <div className="left">
+          <div key={season.id}>
+            <div>
               <p>Season {season.number}</p>
               <p>
                 Episodes: <span>{season.episodeOrder}</span>
               </p>
             </div>
-            <div className="right">
+            <div>
               Aired:{' '}
               <span>
                 {season.premiereDate} - {season.endDate}
@@ -30,7 +30,7 @@ const Seasons = ({ seasons }) => {
             </div>
           </div>
         ))}
-      </SeasonList>
+      </div>
     </SeasonsWrapper>
   );
 };

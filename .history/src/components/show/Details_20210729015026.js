@@ -1,5 +1,5 @@
 import React from 'react';
-import { DetailsWrapper } from './Detailed.styled';
+import { DetailsWrapper } from './Detailed.style';
 
 const Details = ({ status, premiered, network }) => {
   return (

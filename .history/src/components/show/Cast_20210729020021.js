@@ -7,16 +7,15 @@ const Cast = ({ cast }) => {
     <CastList>
       {cast.map(({ person, character, voice }, key) => (
         <div key={key} className="cast-item">
-          <div className="pic-wrapper">
+          <div>
             <img
               src={person.image ? person.image.medium : IMG_PLACEHOLDER}
               alt="cast-person"
             />
           </div>
-          <div className="actor">
+          <div>
             <span>
-              <span className="bold">{person.name} </span>| {character.name}{' '}
-              {voice ? '| Voice' : ''}
+              {person.name} | {character.name} {voice ? '| Voice' : ''}
             </span>
           </div>
         </div>
