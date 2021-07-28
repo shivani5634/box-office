@@ -1,4 +1,3 @@
-/* eslint-disable no-underscore-dangle */
 import React, { useEffect, useReducer } from 'react';
 import { useParams } from 'react-router-dom';
 import Cast from '../components/show/Cast';
@@ -87,7 +86,7 @@ const Show = () => {
       </div>
       <div>
         <h2>Cast</h2>
-        <Cast cast={show._embedded.cast} />
+        <Cast />
       </div>
     </div>
   );
