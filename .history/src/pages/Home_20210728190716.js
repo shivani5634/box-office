@@ -34,11 +34,7 @@ const Home = () => {
       return <div>No results</div>;
     }
     if (results && results.length > 0) {
-      return results[0].show ? (
-        <ShowGrid data={results} />
-      ) : (
-        <ActorGrid data={results} />
-      );
+      return results[0].show ? <ShowGrid /> : <ActorGrid />;
     }
     return null;
   };
