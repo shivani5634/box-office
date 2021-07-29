@@ -26,7 +26,6 @@ const ShowGrid = ({ data }) => {
             image={show.image ? show.image.medium : IMAGE_NOT_FOUND}
             summary={show.summary}
             onStarClick={onStarClick}
-            isStarred={isStarred}
           />
         );
       })}
