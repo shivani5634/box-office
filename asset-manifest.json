@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/box-office/static/css/main.5fffadb5.chunk.css",
-    "main.js": "/box-office/static/js/main.770128cf.chunk.js",
-    "main.js.map": "/box-office/static/js/main.770128cf.chunk.js.map",
+    "main.js": "/box-office/static/js/main.9f9f1c70.chunk.js",
+    "main.js.map": "/box-office/static/js/main.9f9f1c70.chunk.js.map",
     "runtime-main.js": "/box-office/static/js/runtime-main.ecae95e3.js",
     "runtime-main.js.map": "/box-office/static/js/runtime-main.ecae95e3.js.map",
     "static/js/2.92cdfac3.chunk.js": "/box-office/static/js/2.92cdfac3.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.ecae95e3.js",
     "static/js/2.92cdfac3.chunk.js",
     "static/css/main.5fffadb5.chunk.css",
-    "static/js/main.770128cf.chunk.js"
+    "static/js/main.9f9f1c70.chunk.js"
   ]
 }
