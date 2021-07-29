@@ -13,7 +13,7 @@ const Starred = () => {
     if (starred && starred.length > 0) {
       const promises = starred.map(showId => apiGet(`/shows/${showId}`));
       Promise.all(promises)
-        .then(apiData => apiData.map(show => ({ show })))
+        .then(apiData => apiData.map(show => ({show}))
         .then(results => {
           // console.log('results', results);
           setShows(results);
