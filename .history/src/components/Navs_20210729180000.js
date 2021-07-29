@@ -8,19 +8,13 @@ const LINKS = [
 ];
 
 const Navs = () => {
-  const location = useLocation();
-  console.log('location', location);
+  const location = useLocation;
   return (
     <div>
       <NavList>
         {LINKS.map(items => (
           <li key={items.to}>
-            <LinkStyled
-              to={items.to}
-              className={items.to === location.pathname ? 'active' : ''}
-            >
-              {items.text}
-            </LinkStyled>
+            <LinkStyled to={items.to}>{items.text}</LinkStyled>
           </li>
         ))}
       </NavList>

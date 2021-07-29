@@ -70,14 +70,16 @@ const Home = () => {
           />
         </div>
         <div>
-          <CustomRadio
-            label="Actors"
-            id="search-actor"
-            type="radio"
-            value="people"
-            checked={!isShowSearch}
-            onChange={onRadioChange}
-          />
+          <label htmlFor="actor-search">
+            Actor
+            <input
+              id="search-actor"
+              type="radio"
+              value="people"
+              checked={!isShowSearch}
+              onChange={onRadioChange}
+            />
+          </label>
         </div>
       </RadioInputsWrapper>
       <SearchButtonWrapper>

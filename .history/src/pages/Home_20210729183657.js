@@ -78,6 +78,10 @@ const Home = () => {
             checked={!isShowSearch}
             onChange={onRadioChange}
           />
+          <label htmlFor="actor-search">
+            Actor
+            <input type="radio" />
+          </label>
         </div>
       </RadioInputsWrapper>
       <SearchButtonWrapper>
