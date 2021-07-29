@@ -87,5 +87,4 @@ export function useShow(showId) {
       isMounted = false;
     };
   }, [showId]);
-  return state;
 }
